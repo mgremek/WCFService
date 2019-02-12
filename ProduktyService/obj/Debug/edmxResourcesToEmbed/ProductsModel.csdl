@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WarKonfiguratorModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="Category_Id" />
+    </Key>
+    <Property Name="Category_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Category_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="SubCategory" Relationship="Self.FK_Category_Subcategory" FromRole="Category" ToRole="SubCategory" />
+  </EntityType>
+  <EntityType Name="Manufacturers">
+    <Key>
+      <PropertyRef Name="Manufacturer_Id" />
+    </Key>
+    <Property Name="Manufacturer_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Manufacturer_Name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Products_TEST" Relationship="Self.FK_Products_TEST_Manufacturer" FromRole="Manufacturers" ToRole="Products_TEST" />
+  </EntityType>
+  <EntityType Name="Products_TEST">
+    <Key>
+      <PropertyRef Name="ProdID" />
+    </Key>
+    <Property Name="ProdID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Price" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="SubID" Type="Int32" Nullable="false" />
+    <Property Name="ManID" Type="Int32" Nullable="false" />
+    <Property Name="Model" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Specification" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="SubCategory">
+    <Key>
+      <PropertyRef Name="Subcategory_id" />
+    </Key>
+    <Property Name="Subcategory_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Subcategory_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Category_Id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Category" Relationship="Self.FK_Category_Subcategory" FromRole="SubCategory" ToRole="Category" />
+    <NavigationProperty Name="Products_TEST" Relationship="Self.FK_Products_TEST_SubCategory" FromRole="SubCategory" ToRole="Products_TEST" />
+  </EntityType>
+  <Association Name="FK_Category_Subcategory">
+    <End Role="Category" Type="Self.Category" Multiplicity="1" />
+    <End Role="SubCategory" Type="Self.SubCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="Category_Id" />
+      </Principal>
+      <Dependent Role="SubCategory">
+        <PropertyRef Name="Category_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_TEST_Manufacturer">
+    <End Role="Manufacturers" Type="Self.Manufacturers" Multiplicity="1" />
+    <End Role="Products_TEST" Type="Self.Products_TEST" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Manufacturers">
+        <PropertyRef Name="Manufacturer_Id" />
+      </Principal>
+      <Dependent Role="Products_TEST">
+        <PropertyRef Name="ManID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_TEST_SubCategory">
+    <End Role="SubCategory" Type="Self.SubCategory" Multiplicity="1" />
+    <End Role="Products_TEST" Type="Self.Products_TEST" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SubCategory">
+        <PropertyRef Name="Subcategory_id" />
+      </Principal>
+      <Dependent Role="Products_TEST">
+        <PropertyRef Name="SubID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="WarKonfiguratorEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Category" EntityType="Self.Category" />
+    <EntitySet Name="Manufacturers" EntityType="Self.Manufacturers" />
+    <EntitySet Name="Products_TEST" EntityType="Self.Products_TEST" />
+    <EntitySet Name="SubCategory" EntityType="Self.SubCategory" />
+    <AssociationSet Name="FK_Category_Subcategory" Association="Self.FK_Category_Subcategory">
+      <End Role="Category" EntitySet="Category" />
+      <End Role="SubCategory" EntitySet="SubCategory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_TEST_Manufacturer" Association="Self.FK_Products_TEST_Manufacturer">
+      <End Role="Manufacturers" EntitySet="Manufacturers" />
+      <End Role="Products_TEST" EntitySet="Products_TEST" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_TEST_SubCategory" Association="Self.FK_Products_TEST_SubCategory">
+      <End Role="SubCategory" EntitySet="SubCategory" />
+      <End Role="Products_TEST" EntitySet="Products_TEST" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

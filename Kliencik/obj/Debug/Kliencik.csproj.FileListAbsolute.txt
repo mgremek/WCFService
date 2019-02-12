@@ -1,0 +1,34 @@
+C:\Users\k_pawlak\Desktop\ProduktyService\Kliencik\bin\Debug\ApplicationInsights.config
+C:\Users\k_pawlak\Desktop\ProduktyService\Kliencik\bin\Debug\Kliencik.exe.config
+C:\Users\k_pawlak\Desktop\ProduktyService\Kliencik\bin\Debug\Kliencik.exe
+C:\Users\k_pawlak\Desktop\ProduktyService\Kliencik\bin\Debug\Kliencik.pdb
+C:\Users\k_pawlak\Desktop\ProduktyService\Kliencik\bin\Debug\ProduktyService.dll
+C:\Users\k_pawlak\Desktop\ProduktyService\Kliencik\bin\Debug\EntityFramework.dll
+C:\Users\k_pawlak\Desktop\ProduktyService\Kliencik\bin\Debug\ProduktyService.pdb
+C:\Users\k_pawlak\Desktop\ProduktyService\Kliencik\bin\Debug\ProduktyService.dll.config
+C:\Users\k_pawlak\Desktop\ProduktyService\Kliencik\bin\Debug\EntityFramework.xml
+C:\Users\k_pawlak\Desktop\ProduktyService\Kliencik\obj\Debug\Kliencik.csprojAssemblyReference.cache
+C:\Users\k_pawlak\Desktop\ProduktyService\Kliencik\obj\Debug\Kliencik.csproj.CoreCompileInputs.cache
+C:\Users\k_pawlak\Desktop\ProduktyService\Kliencik\obj\Debug\Kliencik.csproj.CopyComplete
+C:\Users\k_pawlak\Desktop\ProduktyService\Kliencik\obj\Debug\Kliencik.exe
+C:\Users\k_pawlak\Desktop\ProduktyService\Kliencik\obj\Debug\Kliencik.pdb
+C:\Users\k_pawlak\Desktop\ProduktyService\Kliencik\bin\Debug\ProduktyService2.dll
+C:\Users\k_pawlak\Desktop\ProduktyService\Kliencik\bin\Debug\ProduktyService2.pdb
+C:\Users\k_pawlak\Desktop\ProduktyService\Kliencik\bin\Debug\ProduktyService2.dll.config
+C:\Users\k_pawlak\Desktop\ProduktyService\Kliencik\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\k_pawlak\Desktop\ProduktyService\Kliencik\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Mały Gremliś\Desktop\ProduktyService\ProduktyService\Kliencik\bin\Debug\ApplicationInsights.config
+C:\Users\Mały Gremliś\Desktop\ProduktyService\ProduktyService\Kliencik\bin\Debug\Kliencik.exe.config
+C:\Users\Mały Gremliś\Desktop\ProduktyService\ProduktyService\Kliencik\bin\Debug\Kliencik.exe
+C:\Users\Mały Gremliś\Desktop\ProduktyService\ProduktyService\Kliencik\bin\Debug\Kliencik.pdb
+C:\Users\Mały Gremliś\Desktop\ProduktyService\ProduktyService\Kliencik\bin\Debug\EntityFramework.dll
+C:\Users\Mały Gremliś\Desktop\ProduktyService\ProduktyService\Kliencik\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Mały Gremliś\Desktop\ProduktyService\ProduktyService\Kliencik\bin\Debug\ProduktyService.dll
+C:\Users\Mały Gremliś\Desktop\ProduktyService\ProduktyService\Kliencik\bin\Debug\ProduktyService2.dll
+C:\Users\Mały Gremliś\Desktop\ProduktyService\ProduktyService\Kliencik\bin\Debug\ProduktyService2.pdb
+C:\Users\Mały Gremliś\Desktop\ProduktyService\ProduktyService\Kliencik\bin\Debug\ProduktyService.pdb
+C:\Users\Mały Gremliś\Desktop\ProduktyService\ProduktyService\Kliencik\bin\Debug\EntityFramework.xml
+C:\Users\Mały Gremliś\Desktop\ProduktyService\ProduktyService\Kliencik\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Mały Gremliś\Desktop\ProduktyService\ProduktyService\Kliencik\obj\Debug\Kliencik.csprojResolveAssemblyReference.cache
+C:\Users\Mały Gremliś\Desktop\ProduktyService\ProduktyService\Kliencik\obj\Debug\Kliencik.exe
+C:\Users\Mały Gremliś\Desktop\ProduktyService\ProduktyService\Kliencik\obj\Debug\Kliencik.pdb

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WarKonfiguratorModelStoreContainer" CdmEntityContainer="WarKonfiguratorEntities">
+    <EntitySetMapping Name="Category">
+      <EntityTypeMapping TypeName="WarKonfiguratorModel.Category">
+        <MappingFragment StoreEntitySet="Category">
+          <ScalarProperty Name="Category_Id" ColumnName="Category_Id" />
+          <ScalarProperty Name="Category_name" ColumnName="Category_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Manufacturers">
+      <EntityTypeMapping TypeName="WarKonfiguratorModel.Manufacturers">
+        <MappingFragment StoreEntitySet="Manufacturers">
+          <ScalarProperty Name="Manufacturer_Id" ColumnName="Manufacturer_Id" />
+          <ScalarProperty Name="Manufacturer_Name" ColumnName="Manufacturer_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products_TEST">
+      <EntityTypeMapping TypeName="WarKonfiguratorModel.Products_TEST">
+        <MappingFragment StoreEntitySet="Products_TEST">
+          <ScalarProperty Name="ProdID" ColumnName="ProdID" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="SubID" ColumnName="SubID" />
+          <ScalarProperty Name="ManID" ColumnName="ManID" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="Specification" ColumnName="Specification" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubCategory">
+      <EntityTypeMapping TypeName="WarKonfiguratorModel.SubCategory">
+        <MappingFragment StoreEntitySet="SubCategory">
+          <ScalarProperty Name="Subcategory_id" ColumnName="Subcategory_id" />
+          <ScalarProperty Name="Subcategory_name" ColumnName="Subcategory_name" />
+          <ScalarProperty Name="Category_Id" ColumnName="Category_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

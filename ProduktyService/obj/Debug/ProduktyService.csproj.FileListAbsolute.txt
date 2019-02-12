@@ -1,0 +1,70 @@
+D:\Visual Studio 2015\Projects\c#\ProduktyService\ProduktyService\bin\ApplicationInsights.config
+D:\Visual Studio 2015\Projects\c#\ProduktyService\ProduktyService\bin\ProduktyService.dll.config
+D:\Visual Studio 2015\Projects\c#\ProduktyService\ProduktyService\bin\ProduktyService.dll
+D:\Visual Studio 2015\Projects\c#\ProduktyService\ProduktyService\bin\ProduktyService.pdb
+D:\Visual Studio 2015\Projects\c#\ProduktyService\ProduktyService\bin\EntityFramework.dll
+D:\Visual Studio 2015\Projects\c#\ProduktyService\ProduktyService\bin\EntityFramework.SqlServer.dll
+D:\Visual Studio 2015\Projects\c#\ProduktyService\ProduktyService\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Visual Studio 2015\Projects\c#\ProduktyService\ProduktyService\bin\Microsoft.AI.DependencyCollector.dll
+D:\Visual Studio 2015\Projects\c#\ProduktyService\ProduktyService\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Visual Studio 2015\Projects\c#\ProduktyService\ProduktyService\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Visual Studio 2015\Projects\c#\ProduktyService\ProduktyService\bin\Microsoft.AI.Web.dll
+D:\Visual Studio 2015\Projects\c#\ProduktyService\ProduktyService\bin\Microsoft.AI.WindowsServer.dll
+D:\Visual Studio 2015\Projects\c#\ProduktyService\ProduktyService\bin\Microsoft.ApplicationInsights.dll
+D:\Visual Studio 2015\Projects\c#\ProduktyService\ProduktyService\bin\EntityFramework.xml
+D:\Visual Studio 2015\Projects\c#\ProduktyService\ProduktyService\bin\EntityFramework.SqlServer.xml
+D:\Visual Studio 2015\Projects\c#\ProduktyService\ProduktyService\bin\Microsoft.AI.DependencyCollector.xml
+D:\Visual Studio 2015\Projects\c#\ProduktyService\ProduktyService\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Visual Studio 2015\Projects\c#\ProduktyService\ProduktyService\bin\Microsoft.AI.Web.xml
+D:\Visual Studio 2015\Projects\c#\ProduktyService\ProduktyService\bin\Microsoft.AI.WindowsServer.xml
+D:\Visual Studio 2015\Projects\c#\ProduktyService\ProduktyService\bin\Microsoft.ApplicationInsights.xml
+D:\Visual Studio 2015\Projects\c#\ProduktyService\ProduktyService\obj\Debug\ProduktyService.csprojResolveAssemblyReference.cache
+D:\Visual Studio 2015\Projects\c#\ProduktyService\ProduktyService\obj\Debug\ProduktyService.dll
+D:\Visual Studio 2015\Projects\c#\ProduktyService\ProduktyService\obj\Debug\ProduktyService.pdb
+C:\Users\k_pawlak\Desktop\ProduktyService\ProduktyService\bin\ApplicationInsights.config
+C:\Users\k_pawlak\Desktop\ProduktyService\ProduktyService\bin\ProduktyService.dll.config
+C:\Users\k_pawlak\Desktop\ProduktyService\ProduktyService\bin\ProduktyService.dll
+C:\Users\k_pawlak\Desktop\ProduktyService\ProduktyService\bin\ProduktyService.pdb
+C:\Users\k_pawlak\Desktop\ProduktyService\ProduktyService\bin\EntityFramework.dll
+C:\Users\k_pawlak\Desktop\ProduktyService\ProduktyService\bin\EntityFramework.SqlServer.dll
+C:\Users\k_pawlak\Desktop\ProduktyService\ProduktyService\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\k_pawlak\Desktop\ProduktyService\ProduktyService\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\k_pawlak\Desktop\ProduktyService\ProduktyService\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\k_pawlak\Desktop\ProduktyService\ProduktyService\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\k_pawlak\Desktop\ProduktyService\ProduktyService\bin\Microsoft.AI.Web.dll
+C:\Users\k_pawlak\Desktop\ProduktyService\ProduktyService\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\k_pawlak\Desktop\ProduktyService\ProduktyService\bin\Microsoft.ApplicationInsights.dll
+C:\Users\k_pawlak\Desktop\ProduktyService\ProduktyService\bin\EntityFramework.xml
+C:\Users\k_pawlak\Desktop\ProduktyService\ProduktyService\bin\EntityFramework.SqlServer.xml
+C:\Users\k_pawlak\Desktop\ProduktyService\ProduktyService\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\k_pawlak\Desktop\ProduktyService\ProduktyService\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\k_pawlak\Desktop\ProduktyService\ProduktyService\bin\Microsoft.AI.Web.xml
+C:\Users\k_pawlak\Desktop\ProduktyService\ProduktyService\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\k_pawlak\Desktop\ProduktyService\ProduktyService\bin\Microsoft.ApplicationInsights.xml
+C:\Users\k_pawlak\Desktop\ProduktyService\ProduktyService\obj\Debug\ProduktyService.csproj.CoreCompileInputs.cache
+C:\Users\k_pawlak\Desktop\ProduktyService\ProduktyService\obj\Debug\ProduktyService.csproj.CopyComplete
+C:\Users\k_pawlak\Desktop\ProduktyService\ProduktyService\obj\Debug\ProduktyService.dll
+C:\Users\k_pawlak\Desktop\ProduktyService\ProduktyService\obj\Debug\ProduktyService.pdb
+C:\Users\Mały Gremliś\Desktop\ProduktyService\ProduktyService\ProduktyService\obj\Debug\ProduktyService.csprojResolveAssemblyReference.cache
+C:\Users\Mały Gremliś\Desktop\ProduktyService\ProduktyService\ProduktyService\obj\Debug\ProduktyService.dll
+C:\Users\Mały Gremliś\Desktop\ProduktyService\ProduktyService\ProduktyService\obj\Debug\ProduktyService.pdb
+C:\Users\Mały Gremliś\Desktop\ProduktyService\ProduktyService\ProduktyService\bin\ApplicationInsights.config
+C:\Users\Mały Gremliś\Desktop\ProduktyService\ProduktyService\ProduktyService\bin\ProduktyService.dll.config
+C:\Users\Mały Gremliś\Desktop\ProduktyService\ProduktyService\ProduktyService\bin\ProduktyService.dll
+C:\Users\Mały Gremliś\Desktop\ProduktyService\ProduktyService\ProduktyService\bin\ProduktyService.pdb
+C:\Users\Mały Gremliś\Desktop\ProduktyService\ProduktyService\ProduktyService\bin\EntityFramework.dll
+C:\Users\Mały Gremliś\Desktop\ProduktyService\ProduktyService\ProduktyService\bin\EntityFramework.SqlServer.dll
+C:\Users\Mały Gremliś\Desktop\ProduktyService\ProduktyService\ProduktyService\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Mały Gremliś\Desktop\ProduktyService\ProduktyService\ProduktyService\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Mały Gremliś\Desktop\ProduktyService\ProduktyService\ProduktyService\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Mały Gremliś\Desktop\ProduktyService\ProduktyService\ProduktyService\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Mały Gremliś\Desktop\ProduktyService\ProduktyService\ProduktyService\bin\Microsoft.AI.Web.dll
+C:\Users\Mały Gremliś\Desktop\ProduktyService\ProduktyService\ProduktyService\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Mały Gremliś\Desktop\ProduktyService\ProduktyService\ProduktyService\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Mały Gremliś\Desktop\ProduktyService\ProduktyService\ProduktyService\bin\EntityFramework.xml
+C:\Users\Mały Gremliś\Desktop\ProduktyService\ProduktyService\ProduktyService\bin\EntityFramework.SqlServer.xml
+C:\Users\Mały Gremliś\Desktop\ProduktyService\ProduktyService\ProduktyService\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Mały Gremliś\Desktop\ProduktyService\ProduktyService\ProduktyService\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Mały Gremliś\Desktop\ProduktyService\ProduktyService\ProduktyService\bin\Microsoft.AI.Web.xml
+C:\Users\Mały Gremliś\Desktop\ProduktyService\ProduktyService\ProduktyService\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Mały Gremliś\Desktop\ProduktyService\ProduktyService\ProduktyService\bin\Microsoft.ApplicationInsights.xml

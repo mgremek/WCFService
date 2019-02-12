@@ -1,0 +1,29 @@
+C:\Users\k_pawlak\Desktop\ProduktyService\ProduktyService2\obj\Debug\ProduktyService2.csprojAssemblyReference.cache
+C:\Users\k_pawlak\Desktop\ProduktyService\ProduktyService2\obj\Debug\ProduktyService2.csproj.CoreCompileInputs.cache
+C:\Users\k_pawlak\Desktop\ProduktyService\ProduktyService2\bin\Debug\ApplicationInsights.config
+C:\Users\k_pawlak\Desktop\ProduktyService\ProduktyService2\bin\Debug\ProduktyService2.dll.config
+C:\Users\k_pawlak\Desktop\ProduktyService\ProduktyService2\bin\Debug\ProduktyService2.dll
+C:\Users\k_pawlak\Desktop\ProduktyService\ProduktyService2\bin\Debug\ProduktyService2.pdb
+C:\Users\k_pawlak\Desktop\ProduktyService\ProduktyService2\bin\Debug\EntityFramework.dll
+C:\Users\k_pawlak\Desktop\ProduktyService\ProduktyService2\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\k_pawlak\Desktop\ProduktyService\ProduktyService2\bin\Debug\ProduktyService.dll
+C:\Users\k_pawlak\Desktop\ProduktyService\ProduktyService2\bin\Debug\ProduktyService.pdb
+C:\Users\k_pawlak\Desktop\ProduktyService\ProduktyService2\bin\Debug\ProduktyService.dll.config
+C:\Users\k_pawlak\Desktop\ProduktyService\ProduktyService2\bin\Debug\EntityFramework.xml
+C:\Users\k_pawlak\Desktop\ProduktyService\ProduktyService2\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\k_pawlak\Desktop\ProduktyService\ProduktyService2\obj\Debug\ProduktyService2.csproj.CopyComplete
+C:\Users\k_pawlak\Desktop\ProduktyService\ProduktyService2\obj\Debug\ProduktyService2.dll
+C:\Users\k_pawlak\Desktop\ProduktyService\ProduktyService2\obj\Debug\ProduktyService2.pdb
+C:\Users\Mały Gremliś\Desktop\ProduktyService\ProduktyService\ProduktyService2\bin\Debug\ApplicationInsights.config
+C:\Users\Mały Gremliś\Desktop\ProduktyService\ProduktyService\ProduktyService2\bin\Debug\ProduktyService2.dll.config
+C:\Users\Mały Gremliś\Desktop\ProduktyService\ProduktyService\ProduktyService2\bin\Debug\ProduktyService2.dll
+C:\Users\Mały Gremliś\Desktop\ProduktyService\ProduktyService\ProduktyService2\bin\Debug\ProduktyService2.pdb
+C:\Users\Mały Gremliś\Desktop\ProduktyService\ProduktyService\ProduktyService2\bin\Debug\EntityFramework.dll
+C:\Users\Mały Gremliś\Desktop\ProduktyService\ProduktyService\ProduktyService2\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Mały Gremliś\Desktop\ProduktyService\ProduktyService\ProduktyService2\bin\Debug\ProduktyService.dll
+C:\Users\Mały Gremliś\Desktop\ProduktyService\ProduktyService\ProduktyService2\bin\Debug\ProduktyService.pdb
+C:\Users\Mały Gremliś\Desktop\ProduktyService\ProduktyService\ProduktyService2\bin\Debug\EntityFramework.xml
+C:\Users\Mały Gremliś\Desktop\ProduktyService\ProduktyService\ProduktyService2\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Mały Gremliś\Desktop\ProduktyService\ProduktyService\ProduktyService2\obj\Debug\ProduktyService2.csprojResolveAssemblyReference.cache
+C:\Users\Mały Gremliś\Desktop\ProduktyService\ProduktyService\ProduktyService2\obj\Debug\ProduktyService2.dll
+C:\Users\Mały Gremliś\Desktop\ProduktyService\ProduktyService\ProduktyService2\obj\Debug\ProduktyService2.pdb
