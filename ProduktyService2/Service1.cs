@@ -34,5 +34,10 @@ namespace ProduktyService2
             return wke.SubCategory.ToList();
         }
 
+        public List<Products_TEST> GetGpu()
+        {
+            return wke.Products_TEST.Select(p=>new {ManID=p.ManID, Model = p.Model, Price = p.Price, SubID = p.SubID, Specification = "[niedostępne w tym widoku]"}).Where(p=>p.SubID==2).Take(200).ToList()
+                .ConvertAll<Products_TEST>(c => new Products_TEST { ManID = c.ManID, Model = c.Model, Price = c.Price, SubID = c.SubID, Specification = c.Specification });
+        }
     }
 }

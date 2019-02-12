@@ -22,6 +22,9 @@ namespace ProduktyService2
         [OperationContract]
         List<SubCategory> GetSubcategory();
 
+        [OperationContract]
+        List<Products_TEST> GetGpu();
+
         // TODO: Add your service operations here
     }
 }

@@ -21,6 +21,7 @@ namespace Kliencik
         private static void H_Opened(object sender, EventArgs e)
         {
             Console.WriteLine("Działa");
+            
         }
     }
 }
