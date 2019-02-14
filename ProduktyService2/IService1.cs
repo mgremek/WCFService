@@ -12,9 +12,8 @@ namespace ProduktyService2
     [ServiceContract]
     public interface IProdukty
     {
-
         [OperationContract]
-        List<Products_TEST> GetProdukty();
+        List<Products> GetProdukty(int subId);
 
         [OperationContract]
         List<Manufacturers> GetManufacturers();
@@ -22,9 +21,5 @@ namespace ProduktyService2
         [OperationContract]
         List<SubCategory> GetSubcategory();
 
-        [OperationContract]
-        List<Products_TEST> GetGpu();
-
-        // TODO: Add your service operations here
     }
 }
