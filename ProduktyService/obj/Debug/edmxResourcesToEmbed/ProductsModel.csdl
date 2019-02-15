@@ -90,5 +90,24 @@
       <End Role="SubCategory" EntitySet="SubCategory" />
       <End Role="Products_TEST" EntitySet="Products_TEST" />
     </AssociationSet>
+    <EntitySet Name="clients" EntityType="WarKonfiguratorModel.clients" />
   </EntityContainer>
+  <EntityType Name="clients">
+    <Key>
+      <PropertyRef Name="client_ID" />
+    </Key>
+    <Property Name="client_ID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Pass" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Zip" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="phonenumber" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="DateInSystem" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OtherXML" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="City_id" Type="Int32" Nullable="false" />
+    <Property Name="Hashed" Type="Binary" MaxLength="50" FixedLength="false" />
+    <Property Name="PasswordProxy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
 </Schema>

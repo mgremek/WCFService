@@ -7,6 +7,24 @@
     <Property Name="Category_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Category_name" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
+  <EntityType Name="clients">
+    <Key>
+      <PropertyRef Name="client_ID" />
+    </Key>
+    <Property Name="client_ID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Pass" Type="nvarchar" MaxLength="50" />
+    <Property Name="Login" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Zip" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="phonenumber" Type="varchar" MaxLength="20" />
+    <Property Name="DateInSystem" Type="smalldatetime" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="OtherXML" Type="xml" />
+    <Property Name="City_id" Type="int" Nullable="false" />
+    <Property Name="Hashed" Type="varbinary" MaxLength="50" />
+    <Property Name="PasswordProxy" Type="nvarchar" MaxLength="50" />
+  </EntityType>
   <EntityType Name="Manufacturers">
     <Key>
       <PropertyRef Name="Manufacturer_Id" />
@@ -71,6 +89,7 @@
   </Association>
   <EntityContainer Name="WarKonfiguratorModelStoreContainer">
     <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="clients" EntityType="Self.clients" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Manufacturers" EntityType="Self.Manufacturers" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Products_TEST" EntityType="Self.Products_TEST" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SubCategory" EntityType="Self.SubCategory" Schema="dbo" store:Type="Tables" />

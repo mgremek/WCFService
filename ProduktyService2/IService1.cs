@@ -21,5 +21,8 @@ namespace ProduktyService2
         [OperationContract]
         List<SubCategory> GetSubcategory();
 
+        [OperationContract]
+        bool IsLogged(string pass, string login);
+
     }
 }

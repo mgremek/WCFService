@@ -24,10 +24,11 @@ namespace ProduktyService
     public class Products
     {
         public int ProdID { get; set; }
+        public Nullable<decimal> Price { get; set; }
+        public string SubID { get; set; }
         public string Manufacturer { get; set; }
         public string Model { get; set; }
-        public Nullable<decimal> Price { get; set; }
-        //public string Subcategory { get; set; } 
         public string Specification { get; set; }
     }
+
 }

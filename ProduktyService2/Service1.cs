@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace ProduktyService2
 {
@@ -41,6 +42,18 @@ namespace ProduktyService2
                                     .ToList()
                                     .ConvertAll<Products>(h => new Products { ProdID = h.ProdID, Manufacturer = h.Manufacturer_Name, Model = h.Model, Price = h.Price, Specification = h.Specification });
         }
-        
+        public bool IsLogged(string pass, string login)
+        {
+            bool sprawdzDane = true;
+            if ((pass != "" || pass != null) && (login != "" || login != null))
+            {
+                var i = (from c in wke.clients
+                            where c.Login == login
+                            where c.Pass == pass
+                            select c.client_ID).Count();
+                if (i==0) sprawdzDane = false;
+            }
+           return sprawdzDane;
+        }
     }
 }
