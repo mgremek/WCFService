@@ -24,5 +24,8 @@ namespace ProduktyService2
         [OperationContract]
         bool IsLogged(string pass, string login);
 
+        [OperationContract]
+        string GetXml(int id);
+
     }
 }
