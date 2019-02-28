@@ -25,7 +25,6 @@ namespace ProduktyService
     {
         public int ProdID { get; set; }
         public Nullable<decimal> Price { get; set; }
-        public string SubID { get; set; }
         public string Manufacturer { get; set; }
         public string Model { get; set; }
         public string Specification { get; set; }

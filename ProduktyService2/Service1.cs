@@ -6,6 +6,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace ProduktyService2
 {
@@ -33,7 +34,7 @@ namespace ProduktyService2
             //return wke.Products_TEST.ToList();
             return wke.Products_TEST.Select(p => new { ProdId = p.ProdID, ManID = p.ManID, Model = p.Model, Price = p.Price, SubID = p.SubID, Specification = "[niedostępne w tym widoku]" })
                                     .Where(p => p.SubID == subId)
-                                    .Take(50)
+                                    .Take(30)
                                     .ToList()
                                     .ConvertAll<Products_TEST>(c => new Products_TEST { ProdID = c.ProdId, ManID = c.ManID, Model = c.Model, Price = c.Price, SubID = c.SubID, Specification = c.Specification })
                                     .Join(wke.Manufacturers, l => l.ManID, r => r.Manufacturer_Id, (l, r) => new { lft = l, rght = r })
@@ -58,6 +59,8 @@ namespace ProduktyService2
 
         public string GetXml(int id) //tujestcoszle
         {
+           // XDocument xd = new XDocument();
+
             var v= wke.Products_TEST.Select(n => new { str = n.Specification, ProdID = n.ProdID }).Where(n => n.ProdID == id).First();
             return v.str;
                    
