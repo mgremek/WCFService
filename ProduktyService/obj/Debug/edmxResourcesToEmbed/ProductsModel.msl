@@ -57,5 +57,32 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Basket">
+      <EntityTypeMapping TypeName="WarKonfiguratorModel.Basket">
+        <MappingFragment StoreEntitySet="Basket">
+          <ScalarProperty Name="BasketStatusId" ColumnName="BasketStatusId" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="BasketId" ColumnName="BasketId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BasketStatusCode">
+      <EntityTypeMapping TypeName="WarKonfiguratorModel.BasketStatusCode">
+        <MappingFragment StoreEntitySet="BasketStatusCode">
+          <ScalarProperty Name="BasketStatusDesc" ColumnName="BasketStatusDesc" />
+          <ScalarProperty Name="BasketStatusId" ColumnName="BasketStatusId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BasketItems">
+      <EntityTypeMapping TypeName="WarKonfiguratorModel.BasketItems">
+        <MappingFragment StoreEntitySet="BasketItems">
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="BasketItemId" ColumnName="BasketItemId" />
+          <ScalarProperty Name="BasketIdFOREIGN" ColumnName="BasketIdFOREIGN" />
+          <ScalarProperty Name="BasketId" ColumnName="BasketId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

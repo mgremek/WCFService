@@ -12,32 +12,18 @@ namespace ProduktyService
     using System;
     using System.Collections.Generic;
     
-    public partial class Products_TEST
+    public partial class BasketStatusCode
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Products_TEST()
+        public BasketStatusCode()
         {
-            this.BasketItems = new HashSet<BasketItems>();
+            this.Basket = new HashSet<Basket>();
         }
     
-        public int ProdID { get; set; }
-        public Nullable<decimal> Price { get; set; }
-        public int SubID { get; set; }
-        public int ManID { get; set; }
-        public string Model { get; set; }
-        public string Specification { get; set; }
+        public int BasketStatusId { get; set; }
+        public string BasketStatusDesc { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<BasketItems> BasketItems { get; set; }
-
-        
-    }
-    public class Products
-    {
-        public int ProdID { get; set; }
-        public Nullable<decimal> Price { get; set; }
-        public string Manufacturer { get; set; }
-        public string Model { get; set; }
-        public string Specification { get; set; }
+        public virtual ICollection<Basket> Basket { get; set; }
     }
 }

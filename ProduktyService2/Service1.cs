@@ -65,5 +65,10 @@ namespace ProduktyService2
             return v.str;
                    
         }
+
+        public List<Products> GetBasketItems(int ClientId)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

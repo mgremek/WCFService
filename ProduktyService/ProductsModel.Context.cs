@@ -30,5 +30,8 @@ namespace ProduktyService
         public virtual DbSet<Products_TEST> Products_TEST { get; set; }
         public virtual DbSet<SubCategory> SubCategory { get; set; }
         public virtual DbSet<clients> clients { get; set; }
+        public virtual DbSet<Basket> Basket { get; set; }
+        public virtual DbSet<BasketStatusCode> BasketStatusCode { get; set; }
+        public virtual DbSet<BasketItems> BasketItems { get; set; }
     }
 }

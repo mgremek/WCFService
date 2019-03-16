@@ -14,6 +14,12 @@ namespace ProduktyService
     
     public partial class clients
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public clients()
+        {
+            this.Basket = new HashSet<Basket>();
+        }
+    
         public int client_ID { get; set; }
         public string Name { get; set; }
         public string Pass { get; set; }
@@ -27,5 +33,8 @@ namespace ProduktyService
         public int City_id { get; set; }
         public byte[] Hashed { get; set; }
         public string PasswordProxy { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Basket> Basket { get; set; }
     }
 }

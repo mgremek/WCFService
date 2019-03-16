@@ -5,6 +5,30 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="WarKonfiguratorModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Basket">
+          <Key>
+            <PropertyRef Name="BasketId" />
+          </Key>
+          <Property Name="BasketId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ClientId" Type="int" />
+          <Property Name="BasketStatusId" Type="int" />
+        </EntityType>
+        <EntityType Name="BasketItems">
+          <Key>
+            <PropertyRef Name="BasketId" />
+          </Key>
+          <Property Name="BasketId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BasketIdFOREIGN" Type="int" Nullable="false" />
+          <Property Name="BasketItemId" Type="int" Nullable="false" />
+          <Property Name="Quantity" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BasketStatusCode">
+          <Key>
+            <PropertyRef Name="BasketStatusId" />
+          </Key>
+          <Property Name="BasketStatusId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BasketStatusDesc" Type="varchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="Category">
           <Key>
             <PropertyRef Name="Category_Id" />
@@ -56,6 +80,54 @@
           <Property Name="Subcategory_name" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Category_Id" Type="int" Nullable="false" />
         </EntityType>
+        <Association Name="FK__Basket__BasketSt__4B422AD5">
+          <End Role="BasketStatusCode" Type="Self.BasketStatusCode" Multiplicity="0..1" />
+          <End Role="Basket" Type="Self.Basket" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BasketStatusCode">
+              <PropertyRef Name="BasketStatusId" />
+            </Principal>
+            <Dependent Role="Basket">
+              <PropertyRef Name="BasketStatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Basket__ClientId__4A4E069C">
+          <End Role="clients" Type="Self.clients" Multiplicity="0..1" />
+          <End Role="Basket" Type="Self.Basket" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="clients">
+              <PropertyRef Name="client_ID" />
+            </Principal>
+            <Dependent Role="Basket">
+              <PropertyRef Name="ClientId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BasketIte__Baske__5A846E65">
+          <End Role="Basket" Type="Self.Basket" Multiplicity="1" />
+          <End Role="BasketItems" Type="Self.BasketItems" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Basket">
+              <PropertyRef Name="BasketId" />
+            </Principal>
+            <Dependent Role="BasketItems">
+              <PropertyRef Name="BasketIdFOREIGN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BasketIte__Baske__5B78929E">
+          <End Role="Products_TEST" Type="Self.Products_TEST" Multiplicity="1" />
+          <End Role="BasketItems" Type="Self.BasketItems" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products_TEST">
+              <PropertyRef Name="ProdID" />
+            </Principal>
+            <Dependent Role="BasketItems">
+              <PropertyRef Name="BasketItemId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Category_Subcategory">
           <End Role="Category" Type="Self.Category" Multiplicity="1" />
           <End Role="SubCategory" Type="Self.SubCategory" Multiplicity="*" />
@@ -93,11 +165,30 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="WarKonfiguratorModelStoreContainer">
+          <EntitySet Name="Basket" EntityType="Self.Basket" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BasketItems" EntityType="Self.BasketItems" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BasketStatusCode" EntityType="Self.BasketStatusCode" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="clients" EntityType="Self.clients" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Manufacturers" EntityType="Self.Manufacturers" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Products_TEST" EntityType="Self.Products_TEST" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SubCategory" EntityType="Self.SubCategory" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Basket__BasketSt__4B422AD5" Association="Self.FK__Basket__BasketSt__4B422AD5">
+            <End Role="BasketStatusCode" EntitySet="BasketStatusCode" />
+            <End Role="Basket" EntitySet="Basket" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Basket__ClientId__4A4E069C" Association="Self.FK__Basket__ClientId__4A4E069C">
+            <End Role="clients" EntitySet="clients" />
+            <End Role="Basket" EntitySet="Basket" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BasketIte__Baske__5A846E65" Association="Self.FK__BasketIte__Baske__5A846E65">
+            <End Role="Basket" EntitySet="Basket" />
+            <End Role="BasketItems" EntitySet="BasketItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BasketIte__Baske__5B78929E" Association="Self.FK__BasketIte__Baske__5B78929E">
+            <End Role="Products_TEST" EntitySet="Products_TEST" />
+            <End Role="BasketItems" EntitySet="BasketItems" />
+          </AssociationSet>
           <AssociationSet Name="FK_Category_Subcategory" Association="Self.FK_Category_Subcategory">
             <End Role="Category" EntitySet="Category" />
             <End Role="SubCategory" EntitySet="SubCategory" />
@@ -141,6 +232,7 @@
           <Property Name="ManID" Type="Int32" Nullable="false" />
           <Property Name="Model" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Specification" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="BasketItems" Relationship="WarKonfiguratorModel.FK__BasketIte__Baske__5B78929E" FromRole="Products_TEST" ToRole="BasketItems" />
         </EntityType>
         <EntityType Name="SubCategory">
           <Key>
@@ -206,7 +298,26 @@
             <End Role="Products_TEST" EntitySet="Products_TEST" />
           </AssociationSet>
           <EntitySet Name="clients" EntityType="WarKonfiguratorModel.clients" />
-        </EntityContainer>
+          <EntitySet Name="Basket" EntityType="WarKonfiguratorModel.Basket" />
+          <EntitySet Name="BasketStatusCode" EntityType="WarKonfiguratorModel.BasketStatusCode" />
+          <AssociationSet Name="FK__Basket__BasketSt__4B422AD5" Association="WarKonfiguratorModel.FK__Basket__BasketSt__4B422AD5">
+            <End Role="BasketStatusCode" EntitySet="BasketStatusCode" />
+            <End Role="Basket" EntitySet="Basket" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Basket__ClientId__4A4E069C" Association="WarKonfiguratorModel.FK__Basket__ClientId__4A4E069C">
+            <End Role="clients" EntitySet="clients" />
+            <End Role="Basket" EntitySet="Basket" />
+          </AssociationSet>
+          <EntitySet Name="BasketItems" EntityType="WarKonfiguratorModel.BasketItems" />
+          <AssociationSet Name="FK__BasketIte__Baske__5A846E65" Association="WarKonfiguratorModel.FK__BasketIte__Baske__5A846E65">
+            <End Role="Basket" EntitySet="Basket" />
+            <End Role="BasketItems" EntitySet="BasketItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BasketIte__Baske__5B78929E" Association="WarKonfiguratorModel.FK__BasketIte__Baske__5B78929E">
+            <End Role="Products_TEST" EntitySet="Products_TEST" />
+            <End Role="BasketItems" EntitySet="BasketItems" />
+          </AssociationSet>
+          </EntityContainer>
         <EntityType Name="clients">
           <Key>
             <PropertyRef Name="client_ID" />
@@ -224,8 +335,87 @@
           <Property Name="City_id" Type="Int32" Nullable="false" />
           <Property Name="Hashed" Type="Binary" MaxLength="50" FixedLength="false" />
           <Property Name="PasswordProxy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Basket" Relationship="WarKonfiguratorModel.FK__Basket__ClientId__4A4E069C" FromRole="clients" ToRole="Basket" />
         </EntityType>
-      </Schema>
+        <EntityType Name="Basket">
+          <Key>
+            <PropertyRef Name="BasketId" />
+          </Key>
+          <Property Name="BasketId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ClientId" Type="Int32" />
+          <Property Name="BasketStatusId" Type="Int32" />
+          <NavigationProperty Name="BasketStatusCode" Relationship="WarKonfiguratorModel.FK__Basket__BasketSt__4B422AD5" FromRole="Basket" ToRole="BasketStatusCode" />
+          <NavigationProperty Name="clients" Relationship="WarKonfiguratorModel.FK__Basket__ClientId__4A4E069C" FromRole="Basket" ToRole="clients" />
+          <NavigationProperty Name="BasketItems" Relationship="WarKonfiguratorModel.FK__BasketIte__Baske__5A846E65" FromRole="Basket" ToRole="BasketItems" />
+          </EntityType>
+        <EntityType Name="BasketStatusCode">
+          <Key>
+            <PropertyRef Name="BasketStatusId" />
+          </Key>
+          <Property Name="BasketStatusId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BasketStatusDesc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Basket" Relationship="WarKonfiguratorModel.FK__Basket__BasketSt__4B422AD5" FromRole="BasketStatusCode" ToRole="Basket" />
+        </EntityType>
+        <Association Name="FK__Basket__BasketSt__4B422AD5">
+          <End Type="WarKonfiguratorModel.BasketStatusCode" Role="BasketStatusCode" Multiplicity="0..1" />
+          <End Type="WarKonfiguratorModel.Basket" Role="Basket" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BasketStatusCode">
+              <PropertyRef Name="BasketStatusId" />
+            </Principal>
+            <Dependent Role="Basket">
+              <PropertyRef Name="BasketStatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Basket__ClientId__4A4E069C">
+          <End Type="WarKonfiguratorModel.clients" Role="clients" Multiplicity="0..1" />
+          <End Type="WarKonfiguratorModel.Basket" Role="Basket" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="clients">
+              <PropertyRef Name="client_ID" />
+            </Principal>
+            <Dependent Role="Basket">
+              <PropertyRef Name="ClientId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="BasketItems">
+          <Key>
+            <PropertyRef Name="BasketId" />
+          </Key>
+          <Property Name="BasketId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BasketIdFOREIGN" Type="Int32" Nullable="false" />
+          <Property Name="BasketItemId" Type="Int32" Nullable="false" />
+          <Property Name="Quantity" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Basket" Relationship="WarKonfiguratorModel.FK__BasketIte__Baske__5A846E65" FromRole="BasketItems" ToRole="Basket" />
+          <NavigationProperty Name="Products_TEST" Relationship="WarKonfiguratorModel.FK__BasketIte__Baske__5B78929E" FromRole="BasketItems" ToRole="Products_TEST" />
+        </EntityType>
+        <Association Name="FK__BasketIte__Baske__5A846E65">
+          <End Type="WarKonfiguratorModel.Basket" Role="Basket" Multiplicity="1" />
+          <End Type="WarKonfiguratorModel.BasketItems" Role="BasketItems" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Basket">
+              <PropertyRef Name="BasketId" />
+            </Principal>
+            <Dependent Role="BasketItems">
+              <PropertyRef Name="BasketIdFOREIGN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BasketIte__Baske__5B78929E">
+          <End Type="WarKonfiguratorModel.Products_TEST" Role="Products_TEST" Multiplicity="1" />
+          <End Type="WarKonfiguratorModel.BasketItems" Role="BasketItems" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products_TEST">
+              <PropertyRef Name="ProdID" />
+            </Principal>
+            <Dependent Role="BasketItems">
+              <PropertyRef Name="BasketItemId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -284,6 +474,33 @@
                 <ScalarProperty Name="Pass" ColumnName="Pass" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="client_ID" ColumnName="client_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Basket">
+            <EntityTypeMapping TypeName="WarKonfiguratorModel.Basket">
+              <MappingFragment StoreEntitySet="Basket">
+                <ScalarProperty Name="BasketStatusId" ColumnName="BasketStatusId" />
+                <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+                <ScalarProperty Name="BasketId" ColumnName="BasketId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BasketStatusCode">
+            <EntityTypeMapping TypeName="WarKonfiguratorModel.BasketStatusCode">
+              <MappingFragment StoreEntitySet="BasketStatusCode">
+                <ScalarProperty Name="BasketStatusDesc" ColumnName="BasketStatusDesc" />
+                <ScalarProperty Name="BasketStatusId" ColumnName="BasketStatusId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BasketItems">
+            <EntityTypeMapping TypeName="WarKonfiguratorModel.BasketItems">
+              <MappingFragment StoreEntitySet="BasketItems">
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="BasketItemId" ColumnName="BasketItemId" />
+                <ScalarProperty Name="BasketIdFOREIGN" ColumnName="BasketIdFOREIGN" />
+                <ScalarProperty Name="BasketId" ColumnName="BasketId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

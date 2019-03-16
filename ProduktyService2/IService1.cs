@@ -27,5 +27,8 @@ namespace ProduktyService2
         [OperationContract]
         string GetXml(int id);
 
+        [OperationContract]
+        List<Products> GetBasketItems(int ClientId);
+
     }
 }
