@@ -68,7 +68,17 @@ namespace ProduktyService2
 
         public List<Products> GetBasketItems(int ClientId)
         {
-            throw new NotImplementedException();
+            var v = wke.BasketItems.Select(n => n)
+                                    .Join(wke.Basket, l => l.BasketIdFOREIGN, r => r.BasketId, (l, r) => new { lft = l, rght = r })
+                                    .Where(x => x.lft.BasketIdFOREIGN == x.rght.BasketId)
+                                    .Where( z=> z.rght.ClientId==ClientId)
+                                    .Where(z=>z.rght.BasketStatusId==1)
+                                    .Select(c => new { c.lft.BasketItemId })
+                                    .Join(wke.Products_TEST, l=>l.BasketItemId, r=>r.ProdID, (l,r)=> new {lft=l,rght=r})
+                                    .Join(wke.Manufacturers,l => l.rght.ManID, r => r.Manufacturer_Id, (l, r) => new { lft = l, rght = r })
+                                    .ToList()
+                                    .ConvertAll<Products>(h=>new Products { ProdID = h.lft.rght.ProdID, Manufacturer = h.rght.Manufacturer_Name, Model = h.lft.rght.Model, Price = h.lft.rght.Price, Specification = null });
+            return v;
         }
     }
 }
