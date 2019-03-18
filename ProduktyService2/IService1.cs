@@ -30,5 +30,8 @@ namespace ProduktyService2
         [OperationContract]
         List<Products> GetBasketItems(int ClientId);
 
+        [OperationContract]
+        bool PostToBasket(int ProdId);
+
     }
 }

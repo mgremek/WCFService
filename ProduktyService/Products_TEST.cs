@@ -29,9 +29,8 @@ namespace ProduktyService
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<BasketItems> BasketItems { get; set; }
-
-        
     }
+
     public class Products
     {
         public int ProdID { get; set; }

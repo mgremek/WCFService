@@ -80,5 +80,10 @@ namespace ProduktyService2
                                     .ConvertAll<Products>(h=>new Products { ProdID = h.lft.rght.ProdID, Manufacturer = h.rght.Manufacturer_Name, Model = h.lft.rght.Model, Price = h.lft.rght.Price, Specification = null });
             return v;
         }
+
+        public bool PostToBasket(int ProdId)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -5,19 +5,19 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="1ee035ae0c9143dab319a20a09a97cd4" Name="Diagram1">
-        <EntityTypeShape EntityType="WarKonfiguratorModel.Category" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="WarKonfiguratorModel.Manufacturers" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="WarKonfiguratorModel.Products_TEST" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="WarKonfiguratorModel.SubCategory" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="WarKonfiguratorModel.Category" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" FillColor="LightSalmon" />
+        <EntityTypeShape EntityType="WarKonfiguratorModel.Manufacturers" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" FillColor="LightSalmon" />
+        <EntityTypeShape EntityType="WarKonfiguratorModel.Products_TEST" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" FillColor="LightSalmon" />
+        <EntityTypeShape EntityType="WarKonfiguratorModel.SubCategory" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" FillColor="LightSalmon" />
         <AssociationConnector Association="WarKonfiguratorModel.FK_Category_Subcategory" ManuallyRouted="false" />
         <AssociationConnector Association="WarKonfiguratorModel.FK_Products_TEST_Manufacturer" ManuallyRouted="false" />
         <AssociationConnector Association="WarKonfiguratorModel.FK_Products_TEST_SubCategory" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="WarKonfiguratorModel.clients" Width="1.625" PointX="7.875" PointY="1.125" />
-        <EntityTypeShape EntityType="WarKonfiguratorModel.Basket" Width="1.5" PointX="10.25" PointY="1.875" />
-        <EntityTypeShape EntityType="WarKonfiguratorModel.BasketStatusCode" Width="1.5" PointX="8" PointY="6.125" />
+        <EntityTypeShape EntityType="WarKonfiguratorModel.clients" Width="1.625" PointX="7.875" PointY="1.125" FillColor="LightSalmon" />
+        <EntityTypeShape EntityType="WarKonfiguratorModel.Basket" Width="1.5" PointX="10.25" PointY="1.875" FillColor="LightSalmon" />
+        <EntityTypeShape EntityType="WarKonfiguratorModel.BasketStatusCode" Width="1.5" PointX="8" PointY="6.125" FillColor="LightSalmon" />
         <AssociationConnector Association="WarKonfiguratorModel.FK__Basket__BasketSt__4B422AD5" />
         <AssociationConnector Association="WarKonfiguratorModel.FK__Basket__ClientId__4A4E069C" />
-        <EntityTypeShape EntityType="WarKonfiguratorModel.BasketItems" Width="1.5" PointX="12.5" PointY="1.5" />
+        <EntityTypeShape EntityType="WarKonfiguratorModel.BasketItems" Width="1.5" PointX="12.5" PointY="1.5" FillColor="LightSalmon" />
         <AssociationConnector Association="WarKonfiguratorModel.FK__BasketIte__Baske__5A846E65" />
         <AssociationConnector Association="WarKonfiguratorModel.FK__BasketIte__Baske__5B78929E" />
       </Diagram>
