@@ -81,9 +81,18 @@ namespace ProduktyService2
             return v;
         }
 
-        public bool PostToBasket(int ProdId)
+        public bool ModifyBasket(int ProdId, Operation operation)
         {
-            throw new NotImplementedException();
+            bool succeded = true;
+            if (operation==Operation.Add)
+            {
+                
+            }
+            else if(operation==Operation.Delete)
+            {
+
+            }
+            return succeded;
         }
     }
 }

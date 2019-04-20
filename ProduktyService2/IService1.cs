@@ -8,6 +8,10 @@ using System.Text;
 
 namespace ProduktyService2
 {
+    public enum Operation
+    {
+        Add, Delete
+    }
     // UWAGA: możesz użyć polecenia „Zmień nazwę” w menu „Refaktoryzuj”, aby zmienić nazwę interfejsu „IService1” w kodzie i pliku konfiguracji.
     [ServiceContract]
     public interface IProdukty
@@ -31,7 +35,7 @@ namespace ProduktyService2
         List<Products> GetBasketItems(int ClientId);
 
         [OperationContract]
-        bool PostToBasket(int ProdId);
-
+        bool ModifyBasket(int ProdId, Operation operation);
+     
     }
 }
